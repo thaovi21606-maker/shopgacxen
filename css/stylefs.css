@@ -1,0 +1,175 @@
+.fs-progress-container {
+    width: 100%;
+    height: 18px;
+    background-color: #ffdae0;
+    border-radius: 10px;
+    position: relative;
+    margin: 10px 0;
+    overflow: hidden;
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.fs-progress-bar {
+    height: 100%;
+    background: linear-gradient(90deg, #ff4d6d, #ff758f);
+    border-radius: 10px;
+    transition: width 1.5s cubic-bezier(0.25, 1, 0.5, 1); 
+}
+
+
+.fs-progress-bar::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-image: linear-gradient(
+        -45deg, 
+        rgba(255, 255, 255, 0.2) 25%, 
+        transparent 25%, 
+        transparent 50%, 
+        rgba(255, 255, 255, 0.2) 50%, 
+        rgba(255, 255, 255, 0.2) 75%, 
+        transparent 75%, 
+        transparent
+    );
+    background-size: 20px 20px;
+    animation: moveStripes 1s linear infinite;
+}
+
+@keyframes moveStripes {
+    0% { background-position: 0 0; }
+    100% { background-position: 20px 0; }
+}
+
+.fs-progress-text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+    font-weight: 800;
+    color: #fff;
+    text-transform: uppercase;
+    z-index: 2;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+}
+
+
+.fs-fire-icon {
+    color: #ffd700;
+    margin-left: 5px;
+    animation: flashFire 0.8s alternate infinite;
+}
+
+@keyframes flashFire {
+    0% { transform: scale(1); opacity: 0.8; }
+    100% { transform: scale(1.3); opacity: 1; }
+}
+
+
+#fomo-toast-container {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    pointer-events: none; 
+}
+
+.fomo-toast {
+    background: #fff;
+    border-left: 4px solid #ff4d6d;
+    padding: 12px 15px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    transform: translateX(-150%);
+    opacity: 0;
+    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    max-width: 300px;
+}
+
+.fomo-toast.show {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.fomo-toast img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 1px solid #eee;
+}
+
+.fomo-text p {
+    margin: 0;
+    font-size: 13px;
+    color: #333;
+    line-height: 1.4;
+}
+
+.fomo-text strong {
+    color: #ff4d6d;
+}
+
+.fomo-time {
+    font-size: 11px;
+    color: #888;
+    margin-top: 3px;
+    display: block;
+}
+
+.product-card { 
+    background: white; 
+    border-radius: 15px; 
+    padding: 20px; 
+    text-align: center; 
+    position: relative; 
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05); 
+    transition: transform 0.3s ease;
+    box-shadow: 0.3s ease; 
+    overflow: hidden; 
+    cursor: pointer; 
+    border: 1px solid transparent;
+    
+   
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+        justify-content: center !important;
+
+}
+
+.product-card:hover { 
+    transform: translateY(-8px); 
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1); 
+    border-color: #ee5253;
+}
+
+
+.product-image { 
+    max-width: 100%; 
+    height: 200px; 
+object-fit: contain;
+    border-radius: 10px; 
+    transition: transform 0.3s ease;
+    
+    
+    display: block;
+    margin: 0 auto 15px auto; 
+}
+
+.product-card:hover .product-image { 
+    transform: scale(1.05); 
+}
