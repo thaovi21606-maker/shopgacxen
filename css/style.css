@@ -3,79 +3,85 @@
 /* ========================================= */
 
 @media screen and (max-width: 768px) {
-    /* Thu nhỏ cực đại các vòng xoáy vũ trụ */
-    .vo-1 { width: 200px; height: 200px; }
-    .vo-2 { width: 280px; height: 280px; }
-    .vo-3 { width: 360px; height: 360px; }
-    .vo-ring i { font-size: 14px; } 
-    .orbit-sphere { width: 160px; height: 160px; }
-
-    /* Thu nhỏ Logo và căn giữa tuyệt đối */
+    /* Gom Logo và Thanh tiến độ vào giữa trang */
     .center-universe {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        top: 40%; /* Đẩy logo lên một chút để nhường chỗ cho text */
     }
-    .intro-logo-core { width: 90px; height: 90px; margin: 0 auto; }
-    .core-img { width: 70px; height: 70px; }
+    .intro-footer-vip {
+        bottom: auto;
+        top: 65%; /* Đẩy phần chữ và thanh tải lên sát logo */
+        transform: translateY(-50%);
+    }
 
-    /* BẮT BUỘC CĂN GIỮA THANH TIẾN ĐỘ & SLOGAN */
-    .intro-footer-vip { 
-        bottom: 8%; 
-        left: 0; 
-        right: 0; 
-        display: flex; 
-        flex-direction: column; 
-        align-items: center; /* Ép mọi thành phần con vào giữa */
-        width: 100%; 
-    }
-    .slogan-vip { font-size: 32px; margin-bottom: 8px; }
-    .sub-slogan-vip { font-size: 12px; margin-bottom: 15px; letter-spacing: 1px; }
-    
-    /* Chống tràn viền cho thanh tải */
-    .progress-wrapper-vip { 
-        width: 85%; 
-        max-width: 260px; 
-        margin: 0 auto; 
-    }
-    .progress-text { font-size: 13px; margin-top: 8px; }
+    /* Thu nhỏ Logo trung tâm */
+    .intro-logo-core { width: 100px; height: 100px; }
+    .core-img { width: 80px; height: 80px; }
 
-    /* THU NHỎ CÁC CHI TIẾT BAY LƠ LỬNG (Sách, Bút, Lông chim...) */
-    .f1 { font-size: 35px; left: 5%; }
-    .f2 { font-size: 20px; left: 40%; }
-    .f3 { font-size: 40px; left: 15%; }
-    .f4 { font-size: 25px; left: 60%; }
-    .f5 { font-size: 30px; left: 5%; }
-    
-    .f6 { font-size: 35px; right: 5%; }
-    .f7 { font-size: 25px; right: 40%; }
-    .f8 { font-size: 45px; right: 15%; }
-    .f9 { font-size: 25px; right: 60%; }
-    .f10 { font-size: 30px; right: 10%; }
-    
-    /* Thu nhỏ các hạt bụi sáng */
-    .fp { transform: scale(0.6); }
+    /* Thu nhỏ các vòng xoáy vũ trụ */
+    .vo-1 { width: 220px; height: 220px; }
+    .vo-2 { width: 320px; height: 320px; }
+    .vo-3 { width: 420px; height: 420px; }
+    .vo-ring i { font-size: 18px; } 
+
+    /* Thu nhỏ khối cầu 3D */
+    .orbit-sphere { width: 180px; height: 180px; }
+
+    /* Điều chỉnh Slogan và thanh tải (Progress Bar) */
+    .slogan-vip { font-size: 36px; margin-bottom: 10px; }
+    .sub-slogan-vip { font-size: 13px; margin-bottom: 20px; }
+    .progress-wrapper-vip { width: 80%; max-width: 280px; margin: 0 auto; }
+    .progress-text { font-size: 14px; margin-top: 8px; }
+
+    /* Thu nhỏ đáng kể các icon lơ lửng hai bên để bớt rối mắt */
+    .f1 { font-size: 40px; }
+    .f2 { font-size: 25px; }
+    .f3 { font-size: 50px; }
+    .f4 { font-size: 35px; }
+    .f5 { font-size: 40px; }
+    .f6 { font-size: 45px; }
+    .f7 { font-size: 30px; }
+    .f8 { font-size: 55px; }
+    .f9 { font-size: 35px; }
+    .f10 { font-size: 40px; }
 }
 
 @media screen and (max-width: 480px) {
-    /* Màn hình điện thoại nhỏ (iPhone SE, dòng Mini...) */
-    .vo-1 { width: 160px; height: 160px; }
-    .vo-2 { width: 220px; height: 220px; }
-    .vo-3 { width: 280px; height: 280px; }
-    .orbit-sphere { width: 130px; height: 130px; }
-    
-    .intro-logo-core { width: 75px; height: 75px; }
-    .core-img { width: 60px; height: 60px; }
+    /* Căn chỉnh sát hơn nữa cho màn hình điện thoại hẹp */
+    .center-universe { top: 38%; }
+    .intro-footer-vip { top: 62%; }
 
-    .slogan-vip { font-size: 28px; }
-    .sub-slogan-vip { font-size: 11px; }
+    /* Kích thước Logo nhỏ gọn */
+    .intro-logo-core { width: 85px; height: 85px; }
+    .core-img { width: 70px; height: 70px; }
+
+    /* Ép kích thước vòng xoáy nhỏ hơn */
+    .vo-1 { width: 180px; height: 180px; }
+    .vo-2 { width: 260px; height: 260px; }
+    .vo-3 { width: 340px; height: 340px; }
+    .vo-ring i { font-size: 14px; }
+
+    .orbit-sphere { width: 150px; height: 150px; }
+
+    /* Điều chỉnh Typography cho vừa vặn */
+    .slogan-vip { font-size: 28px; margin-bottom: 8px; }
+    .sub-slogan-vip { font-size: 11px; margin-bottom: 15px; }
+    .progress-wrapper-vip { width: 75%; max-width: 240px; }
+    .progress-text { font-size: 12px; margin-top: 5px; }
+
+    /* Tỉ lệ icon bé lại để làm nền mờ ảo thay vì che khuất logo */
+    .f1 { font-size: 30px; }
+    .f2 { font-size: 18px; }
+    .f3 { font-size: 35px; }
+    .f4 { font-size: 25px; }
+    .f5 { font-size: 30px; }
+    .f6 { font-size: 35px; }
+    .f7 { font-size: 22px; }
+    .f8 { font-size: 40px; }
+    .f9 { font-size: 25px; }
+    .f10 { font-size: 30px; }
     
-    /* Ép sách bay nhỏ nhắn lại để làm nền mờ */
-    .f1, .f6 { font-size: 26px; }
-    .f3, .f8 { font-size: 30px; }
-    .f5, .f10 { font-size: 22px; }
-    .f4, .f9 { font-size: 18px; }
-    .f2, .f7 { font-size: 14px; }
+    /* Thu nhỏ các hạt sáng (particles) */
+    .fp { transform: scale(0.6); }
 }
 * {
     margin: 0;
