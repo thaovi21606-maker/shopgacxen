@@ -2510,16 +2510,73 @@ html.skip-intro #intro-loader {
     .action-btn { padding: 0 10px; font-size: 12px; height: 38px; }
     .cart-count { min-width: 20px; height: 20px; line-height: 20px; font-size: 11px; margin-left: 4px; }
     
-    .nav-menu {
-        justify-content: flex-start;
-        overflow-x: auto;
-        flex-wrap: nowrap;
-        padding-bottom: 10px;
-        gap: 10px;
+   /* --- BẮT ĐẦU ĐOẠN ĐỔI MENU THÀNH SIDEBAR --- */
+    
+    /* 1. Đổi màu thanh điều hướng thành dải màu đỏ giống Kim Đồng */
+    .navigation {
+        background-color: var(--primary-color) !important;
+        padding: 10px 15px !important;
+        position: relative;
+        border: none !important;
     }
-    .nav-menu::-webkit-scrollbar { height: 3px; }
-    .nav-menu::-webkit-scrollbar-thumb { background: #ff4d6d; border-radius: 10px; }
-    .nav-menu > li > a { white-space: nowrap; } 
+
+    /* 2. Cấu hình Nút Hamburger (3 gạch) hiển thị trên Mobile */
+    .mobile-menu-btn {
+        display: block;
+        color: #fff;
+        font-size: 24px;
+        cursor: pointer;
+    }
+
+    /* 3. Gom các mục Menu thành dạng Sidebar sổ dọc */
+    .nav-menu {
+        display: none; /* Ẩn đi, chờ click để hiện */
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 280px;
+        background-color: #fff;
+        box-shadow: 2px 5px 15px rgba(0,0,0,0.15);
+        z-index: 1000;
+        padding: 0;
+        gap: 0;
+    }
+
+    /* Class dùng để bật/tắt menu */
+    .nav-menu.show {
+        display: flex; 
+    }
+
+    /* 4. Căn chỉnh lại các Nút bấm bên trong Sidebar */
+    .nav-menu > li {
+        width: 100%;
+        border-bottom: 1px solid #f0f0f0;
+    }
+
+    .nav-menu > li > a {
+        white-space: normal !important;
+        padding: 14px 20px !important;
+        color: #333 !important;
+        border-radius: 0 !important;
+        text-align: left;
+        display: block;
+        font-size: 14.5px !important;
+    }
+
+    /* Hiệu ứng khi lướt qua các nút trong Sidebar */
+    .nav-menu > li > a:hover, 
+    .nav-menu > li > a.active {
+        background-color: #fdf5f6 !important;
+        color: var(--primary-color) !important;
+        box-shadow: none !important;
+        border-left: 4px solid var(--primary-color); /* Thêm dải đỏ bên trái cho đẹp */
+    }
+    
+    /* Xóa bỏ thanh cuộn cũ */
+    .nav-menu::-webkit-scrollbar { display: none; }
+    
+    /* --- KẾT THÚC ĐOẠN ĐỔI MENU --- */
 
     .banner-top { 
         flex-direction: row !important;
@@ -2978,5 +3035,8 @@ header .nav-menu .dropdown-menu li a {
         width: 38px !important;
         height: 38px !important;
     }
+}
+.mobile-menu-btn {
+    display: none; /* Ẩn mặc định trên PC */
 }
 
