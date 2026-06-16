@@ -3,13 +3,14 @@
 /* ========================================= */
 
 @media screen and (max-width: 768px) {
-    /* Tạo khoảng cách an toàn, không để chữ chồng lên logo */
+    /* Đưa Logo xuống giữa màn hình */
     .center-universe {
-        top: 35% !important; /* Kéo cụm logo lên cao */
+        top: 43% !important; 
     }
+    /* Kéo cụm chữ lên sát với Logo */
     .intro-footer-vip {
         bottom: auto !important;
-        top: 60% !important; /* Đẩy cụm chữ và thanh tải xuống dưới */
+        top: 58% !important; 
         transform: none !important;
     }
 
@@ -46,9 +47,9 @@
 }
 
 @media screen and (max-width: 480px) {
-    /* Căn chỉnh lại cho màn hình điện thoại di động hẹp */
-    .center-universe { top: 33% !important; }
-    .intro-footer-vip { top: 58% !important; }
+    /* Căn chỉnh khoảng cách siêu khít cho màn hình điện thoại di động hẹp */
+    .center-universe { top: 42% !important; }
+    .intro-footer-vip { top: 56% !important; }
 
     .intro-logo-core { width: 75px !important; height: 75px !important; }
     .core-img { width: 60px !important; height: 60px !important; }
